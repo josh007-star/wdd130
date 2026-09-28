@@ -2,8 +2,8 @@
 /* Color Palette and Typography Variables */
 :root {
   --primary-color: #264653;
-  --secondary-color: #2a9d8f;
-  --accent1-color: #e76f51;
+  --secondary-color: #1f756b;
+  --accent1-color: #b94d35;
   --accent2-color: #f4a261;
   --heading-font: "Georgia", serif;
   --body-font: Arial, Helvetica, sans-serif;
@@ -28,10 +28,16 @@ header, main, footer {
   margin: 0 auto;
 }
 
-/* Typography Styles */
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
+/* Header */
+header {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  padding: 10px;
+}
+
+header img {
+  width: 120px;
 }
 
 /* Navigation */
@@ -39,36 +45,64 @@ nav {
   background-color: var(--secondary-color);
 }
 
-nav, p, section, article {
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav li {
+  flex: 1;
+}
+
+nav a {
+  display: block;
+  padding: 12px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--primary-color);
+}
+
+/* Typography Styles */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* General spacing */
+p, section, article {
   margin: 16px;
   padding: 8px;
 }
 
-/* Footer Social Media Styling */
-.socialmedia a {
-  text-decoration: none;
-}
-
-/* Hero Section with Overlays */
+/* Hero Section */
 .hero {
   position: relative;
 }
 
-.hero img {
+.hero > img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-h1 {
+.hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.85;
   background-color: var(--accent1-color);
-  color: #fff;
+  color: white;
+  opacity: 0.95;
 }
 
 .hero article {
@@ -86,4 +120,61 @@ h1 {
   width: 125px;
   margin-left: 10px;
   border-radius: 4px;
+}
+
+/* History Section */
+main section {
+  margin: 20px 0;
+  padding: 20px;
+}
+
+/* Adventure Section */
+.adventures {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.adventures figure {
+  flex: 1;
+  text-align: center;
+}
+
+.adventures img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.adventures figcaption {
+  padding: 8px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+.socialmedia {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  background-color: transparent;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 30px;
+  height: 30px;
 }
