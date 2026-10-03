@@ -178,3 +178,112 @@ footer p {
   width: 30px;
   height: 30px;
 }
+
+
+/* Contact Page */
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.contact-info h2 {
+    margin-bottom: 15px;
+}
+
+.map iframe {
+    width: 100%;
+    max-width: 400px;
+    border: none;
+}
+
+.employees {
+    margin-top: 30px;
+}
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.employee-grid figure {
+    text-align: center;
+}
+
+.employee-grid img {
+    width: 100%;
+    max-width: 220px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.employee-grid figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-form form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form fieldset {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid var(--primary-color);
+}
+
+.contact-form legend {
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-family: var(--body-font);
+    box-sizing: border-box;
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.contact-form .checkbox-label {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.contact-form button {
+    display: block;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent1-color);
+}
