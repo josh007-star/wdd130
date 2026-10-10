@@ -104,7 +104,8 @@ nav a {
 }
 
 nav a:hover,
-nav a:focus-visible {
+nav a:focus-visible,
+nav a[aria-current="page"] {
     background-color: var(--primary-color);
     color: #ffffff;
 }
@@ -143,9 +144,16 @@ main section > h2 {
     margin-bottom: 20px;
 }
 
+/* Heading that spans a whole grid row */
+.grid-heading {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 0;
+}
+
 /* ========================================
    HERO SECTION
-   Used on About and Home pages
+   Used on About, Home and Trips pages
    ======================================== */
 
 .hero {
@@ -257,10 +265,30 @@ main section > h2 {
     margin: 0;
     padding: 10px;
     text-align: center;
+    background-color: var(--primary-color);
     color: #ffffff;
     font-size: 1.2rem;
     font-weight: bold;
-    text-shadow: 1px 1px 3px #000000;
+    border-radius: 5px;
+}
+
+/* CTA and Newsletter side by side */
+.home-split {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.home-split > section {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-split .cta-button {
+    align-self: center;
 }
 
 /* Home Call to Action */
@@ -407,7 +435,7 @@ main section > h2 {
     border-radius: 8px;
 }
 
-.trips-intro h1 {
+.trips-intro h2 {
     margin-bottom: 10px;
 }
 
@@ -462,6 +490,12 @@ main section > h2 {
 .trips-table {
     width: 100%;
     border-collapse: collapse;
+    text-align: left;
+}
+
+.trips-table caption {
+    padding: 8px 0;
+    font-weight: bold;
     text-align: left;
 }
 
@@ -737,6 +771,7 @@ footer p {
 
     .history,
     .home-grid,
+    .home-split,
     .contact-info,
     .trips-grid {
         grid-template-columns: 1fr;
