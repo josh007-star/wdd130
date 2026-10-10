@@ -144,6 +144,15 @@ main section > h2 {
     margin-bottom: 20px;
 }
 
+/* Keep hero, card grids and table flush with the other blocks */
+.hero,
+.home-grid,
+.trips-grid,
+.trip-table-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 /* Heading that spans a whole grid row */
 .grid-heading {
     grid-column: 1 / -1;
