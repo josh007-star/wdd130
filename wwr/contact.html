@@ -14,13 +14,15 @@
 <body>
 
     <header>
-        <img src="images/logo.png" alt="Rapid River Adventures Logo">
+        <img src="images/logo.png" alt="Rapid River Adventures Logo" width="182" height="149">
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact Us</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -63,19 +65,19 @@
 
                 <figure>
                     <img src="images/employee1.jpg"
-                        alt="Rafting guide preparing for a river trip">
+                        alt="Rafting guide preparing for a river trip" width="396" height="800" loading="lazy">
                     <figcaption>Alex Johnson - Head Rafting Guide</figcaption>
                 </figure>
 
                 <figure>
                     <img src="images/employee2.jpg"
-                        alt="Rafting instructor helping customers">
+                        alt="Rafting instructor helping customers" width="396" height="800" loading="lazy">
                     <figcaption>Sarah Williams - Customer Experience Manager</figcaption>
                 </figure>
 
                 <figure>
                     <img src="images/employee3.jpg"
-                        alt="Rafting guide beside a river">
+                        alt="Rafting guide beside a river" width="396" height="800" loading="lazy">
                     <figcaption>Mike Davis - Adventure Guide</figcaption>
                 </figure>
 
@@ -174,27 +176,20 @@
     </main>
 
     <footer>
+        <p>&copy; 2026 Rapid River Adventures | Joshua Salami</p>
 
-        <p>© 2026 Rapid River Adventures | Joshua Salami</p>
-
-        <nav class="socialmedia">
-
-            <a href="https://www.facebook.com/">
+        <nav class="socialmedia" aria-label="Social media">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/facebook.svg" alt="Facebook">
             </a>
-
-            <a href="https://www.linkedin.com/">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/linkedin.svg" alt="LinkedIn">
             </a>
-
-            <a href="https://www.instagram.com/">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/instagram.svg" alt="Instagram">
             </a>
-
         </nav>
-
     </footer>
-
 
 </body>
 </html>
